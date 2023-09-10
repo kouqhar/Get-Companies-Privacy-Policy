@@ -14,10 +14,10 @@ const fetchCompanyPrivacyByName = async (company, signal) => {
   try {
     const options = {
       method: "GET",
-      url: `${getCompanyPrivacyPath}/?query=${company}`,
+      url: `${VITE_BASE_URL}${getCompanyPrivacyPath}/?query=${company}`,
       signal,
     };
-    const response = await axiosInstance(options);
+    const response = await axios(options);
     const data = response?.data?.parameters?.services.find(
       (elem) => elem?.is_comprehensively_reviewed
     );
@@ -46,12 +46,12 @@ const fetchCompanyPrivacyService = async (url, signal) => {
 const fetchCompanyPrivacyCase = async (case_id, signal) => {
   const options = {
     method: "GET",
-    url: `${getCompanyPrivacyCase}/?case=${Number(case_id)}`,
+    url: `${VITE_BASE_URL}${getCompanyPrivacyCase}/?case=${Number(case_id)}`,
     signal,
   };
 
   try {
-    const privacyCaseResponse = await axiosInstance(options);
+    const privacyCaseResponse = await axios(options);
     console.log("Reached");
     return privacyCaseResponse;
   } catch (err) {
