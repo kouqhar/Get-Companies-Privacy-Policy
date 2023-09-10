@@ -1,0 +1,31 @@
+.company_points__container {
+  max-width: 1200px;
+  width: 70%;
+  margin-inline: auto;
+  padding: 0 1.5rem;
+  border: 1px solid #eee;
+  height: 98vh;
+  overflow: hidden;
+}
+.company_points__container___header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #aaa;
+  padding-block: 0.5rem;
+  height: 5%;
+}
+.company_points__container___header img {
+  height: 120%;
+  border-radius: 50%;
+}
+.company_points__container___header p {
+  font-weight: bold;
+}
+.company_points__container___content {
+  height: 100%;
+  overflow: auto;
+}
+.company_points__container___content::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=styles.module.css.map */

@@ -1,0 +1,39 @@
+.search_container {
+    background-color: teal;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__content {
+        width: 50%;
+        margin-inline: auto;
+        display: grid;
+        gap: .5rem;
+        font-weight: bold;
+
+        input {
+            border: none;
+            padding: .5rem 1rem;
+            font-size: 1.2rem;
+            border-radius: .5rem;
+            width: 70%;
+            outline: none;
+        }
+    }
+
+    &__thanks {
+        &___links {
+            font-size: .75rem;
+        }
+    }
+}
+
+.privacy_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    gap: 1rem;
+}
