@@ -1,15 +1,16 @@
 .search_container {
     background-color: teal;
-    height: 15vh;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     &__content {
-        width: 50%;
+        width: 60%;
+        max-width: 1200px;
         margin-inline: auto;
         display: grid;
-        gap: .5rem;
+        gap: .35rem;
         font-weight: bold;
 
         input {
@@ -17,12 +18,13 @@
             padding: .5rem 1rem;
             font-size: 1.2rem;
             border-radius: .5rem;
-            width: 70%;
+            width: 100%;
             outline: none;
         }
     }
 
     &__thanks {
+    	width: 20%;
         &___links {
             font-size: .75rem;
         }

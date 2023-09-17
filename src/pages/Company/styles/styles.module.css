@@ -26,6 +26,15 @@
   height: 100%;
   overflow: auto;
 }
+.company_points__container___goback {
+  position: absolute;
+  top: 2%;
+  left: 25%;
+  background-color: rgb(192, 5, 5);
+  color: #fff;
+  padding: .15rem .5rem;
+  border-radius: .3rem;
+}
 .company_points__container___content::-webkit-scrollbar {
   display: none;
 }/*# sourceMappingURL=styles.module.css.map */

@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
+
 // Components
 import Points from "../../components/PolicyCard/Points";
 
@@ -5,12 +8,19 @@ import Points from "../../components/PolicyCard/Points";
 import styles from "./styles/styles.module.css";
 
 const Company = () => {
+  const navigate = useNavigate()
+  
   const getPoints = JSON.parse(localStorage.getItem("company-points"));
   const [grade, name, image] = getPoints[0];
   const points = getPoints[1];
+  
+  useEffect(() => {
+    if(!getPoints) navigate("/")
+  }, [])
 
   return (
     <div className={styles.company_points__container}>
+    <Link to="/" className={styles.company_points__container___goback} >Go Back</Link>
       <div className={styles.company_points__container___header}>
         <img src={image} alt={name} />
         <h2>{name}</h2>
